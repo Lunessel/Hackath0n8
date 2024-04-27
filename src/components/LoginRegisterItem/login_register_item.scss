@@ -1,0 +1,32 @@
+.login-register-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 390px;
+  padding: 20px 0 20px 0;
+}
+
+.login-register-item__input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 10px;
+  background-color: white;
+  padding: 30px 30px;
+  border-radius: 25px;
+
+  & > button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    & > span {
+      color: rgb(0, 170, 255);
+    }
+  }
+
+  .black-button:hover {
+    background-color: #e2e1e1;
+  }
+}
+
