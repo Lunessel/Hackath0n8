@@ -1,0 +1,32 @@
+.want-to-help {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 20px;
+  padding: 20px 0;
+}
+
+.logo-moto {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  margin: 0 30px;
+
+  h2 {
+    text-align: center;
+  }
+}
+
+.collection {
+  display: flex;
+  flex-direction: column;
+  row-gap: 22px;
+}
+
+//.want-to-help__filter {
+//  display: flex;
+//  flex-direction: column;
+//  align-items: flex-end;
+//}
