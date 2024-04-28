@@ -65,7 +65,7 @@ const RegisterItem = ({step, setStep}) => {
             <h4 className={'error-filed'}>{error}</h4>
             <BlackButton id={'want_to_help'} type={'submit'} border_radius={'10px'} text={'Хочу Допомогти'}
                          width={'230px'}/>
-            <BlackButton id={'need_help'}  type={'submit'}border_radius={'10px'} text={'Хочу Знайти Допомогу'}
+            <BlackButton id={'need_help'}  type={'submit'} border_radius={'10px'} text={'Хочу Знайти Допомогу'}
                          width={'230px'}/>
         </form>
     );
