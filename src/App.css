@@ -2,6 +2,14 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: 'e-Ukraine', sans-serif;
+
+}
+
+@font-face {
+  font-family: 'e-Ukraine';
+  src: url("./fonts/e-Ukraine/e-Ukraine-Light.otf");
+
 }
 
 .App {
