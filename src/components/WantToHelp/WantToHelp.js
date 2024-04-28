@@ -1,20 +1,44 @@
-import React, {useState} from 'react';
-import './want_to_help.scss';
+import React, {useCallback, useEffect, useState} from 'react';
 import CollectionItem from "../shared/CollectionItem/CollectionItem";
 import PopUpModalWindow from "../shared/PopUpModalWindow/PopUpModalWindow";
+import Pagination from 'rc-pagination';
+
+import HelpService from "../../services/HelpService";
 import Logo from './images/logo_test.svg';
-import Lock from './images/material-symbols_lock-outline.svg';
 import Zbir from './images/zbir.svg';
 import Pidveztu from './images/pidveztu.svg';
 import Dopomoga from './images/dopomoga.svg';
+import 'rc-pagination/assets/index.css'
+import './want_to_help.scss';
+
 
 const WantToHelp = () => {
+    const limit = 3;
+    const [total, setTotal] = useState(0)
+    const [helpRequests, setHelpRequests] = useState([])
     const [phoneNumber, setPhoneNumber] = useState()
     const [contactsActive, setContactsActive] = React.useState(false);
     const titlePhoto = {
         collection: Zbir,
         pickup: Pidveztu,
         help: Dopomoga
+    }
+
+    const fetchData = useCallback(async (offset) => {
+        const response = await HelpService.get_help_requests(limit, offset);
+
+        setHelpRequests(response.data.items)
+        setTotal(response.data.total)
+    }, [])
+
+    useEffect( () => {
+
+        fetchData(0)
+    }, [ fetchData]);
+
+    const changePageNumber = (e) => {
+        console.log(e)
+        fetchData(limit*(e-1))
     }
 
     return (
@@ -28,52 +52,27 @@ const WantToHelp = () => {
             {/*/!*    <button>Фільтр <img src={Lock} alt={"lock"}/></button>*!/*/}
             {/*</div>*/}
             <div className={'collection'}>
-                <CollectionItem
-                    title={"collection"}
-                    main_text={"Терміновий збір на пікап для ЗСУ 115 бригада"}
-                    additional_text={"Ціль: 15000 UAH"}
-                    contacts={"099 222 46 93"}
-                    setPhoneNumber={setPhoneNumber}
-                    setActive={setContactsActive}
-                    photo={titlePhoto}
-                />
-                <CollectionItem
-                    title={"pickup"}
-                    main_text={"Терміновий збір на пікап для ЗСУ 115 бригада"}
-                    additional_text={"Ціль: 15000 UAH"}
-                    contacts={"099 222 46 93"}
-                    setPhoneNumber={setPhoneNumber}
-                    setActive={setContactsActive}
-                    photo={titlePhoto}
-                />
-                <CollectionItem
-                    title={"help"}
-                    main_text={"Терміновий збір на пікап для ЗСУ 115 бригада"}
-                    additional_text={"Ціль: 15000 UAH"}
-                    contacts={"099 222 46 93"}
-                    setPhoneNumber={setPhoneNumber}
-                    setActive={setContactsActive}
-                    photo={titlePhoto}
-                />
-                <CollectionItem
-                    title={"collection"}
-                    main_text={"Терміновий збір на пікап для ЗСУ 115 бригада"}
-                    additional_text={"Ціль: 15000 UAH"}
-                    contacts={"099 222 46 93"}
-                    setPhoneNumber={setPhoneNumber}
-                    setActive={setContactsActive}
-                    photo={titlePhoto}
-                />
-                <CollectionItem
-                    title={"collection"}
-                    main_text={"Терміновий збір на пікап для ЗСУ 115 бригада"}
-                    additional_text={"Ціль: 15000 UAH"}
-                    contacts={"099 222 46 93"}
-                    setPhoneNumber={setPhoneNumber}
-                    setActive={setContactsActive}
-                    photo={titlePhoto}
-                />
+                {helpRequests.map((item, index) => (
+                    <CollectionItem
+                        key = {index}
+                        title={item.title}
+                        main_text={item.text}
+                        additional_text={item.extra_text}
+                        contacts={item.phone_number}
+                        isVolunteer={item.is_volunteer}
+                        setPhoneNumber={setPhoneNumber}
+                        setActive={setContactsActive}
+                        photo={titlePhoto}
+                    />
+                ))}
             </div>
+
+            <Pagination
+                className={'rc-pagination'}
+                total={total}
+                pageSize={limit}
+                onChange={changePageNumber}
+            />
 
             <PopUpModalWindow active={contactsActive} setActive={setContactsActive} children={
                 <div>

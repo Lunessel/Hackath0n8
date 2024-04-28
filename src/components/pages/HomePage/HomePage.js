@@ -1,5 +1,5 @@
-import React from 'react';
-import {Route, Routes, useLocation} from 'react-router-dom';
+import React, {useEffect} from 'react';
+import {Route, Routes, useLocation, useNavigate} from 'react-router-dom';
 import NavBar from "../../NavBar/NavBar";
 import './home_page.scss';
 import WantToHelp from "../../WantToHelp/WantToHelp";
@@ -8,6 +8,12 @@ import SuccessPage from "../SuccessPage/SuccessPage";
 
 const HomePage = () => {
     const location = useLocation();
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        if (!localStorage.getItem('token'))
+            navigate('/')
+    }, []);
 
     return (
         <div className={'home-page'}>
