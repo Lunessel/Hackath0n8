@@ -11,7 +11,7 @@ const CircleStageItem = ({step}) => {
                 <div className='circle' style={{backgroundColor: step >= 1 ? 'black' : 'white'}}></div>
                 {/*<div className='line' style={{backgroundColor: step >= 2 ? 'black' : 'white'}}></div>*/}
             </div>
-            <div className='circle-container' style={{bottom: 0, left: '55px'}}>
+            <div className='circle-container' style={{bottom: 0, left: '54px'}}>
                 <div className='circle' style={{backgroundColor: step >= 2 ? 'black' : 'white'}}></div>
                 <h3>Зареєструйся</h3>
                 {/*<div className='line' style={{backgroundColor: step >= 3 ? 'black' : 'white'}}></div>*/}

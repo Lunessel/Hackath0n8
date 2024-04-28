@@ -59,7 +59,7 @@ const RegisterItem = ({step, setStep}) => {
             <AuthTextField
                 text={'Створіть пароль'}
                 width={'230px'}
-                type={'text'}
+                type={'password'}
                 onChange={(e) => setPassword(e.target.value)}
             />
             <h4 className={'error-filed'}>{error}</h4>
