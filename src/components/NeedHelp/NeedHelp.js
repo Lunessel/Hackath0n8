@@ -44,7 +44,8 @@ const NeedHelp = () => {
         fetchData()
     }, [ fetchData]);
 
-    const handleSubmit = async () => {
+    const handleSubmit = async (e) => {
+        e.preventDefault()
         const result = await HelpService.post_help_request(
             title,
             mainText,
@@ -60,7 +61,7 @@ const NeedHelp = () => {
 
     
     return (
-        <div className={'need-help'}>
+        <form className={'need-help'} onSubmit={handleSubmit}>
             {myRequests !== [] && <div className={'your-requests'}>
                 <h3>Твої запити</h3>
                 <div>
@@ -157,20 +158,20 @@ const NeedHelp = () => {
             </div>
 
             <div>
-                <textarea rows={4} placeholder={'Основний текст'} onChange={(e) => setMainText(e.target.value)}/>
+                <textarea required rows={4} placeholder={'Основний текст'} onChange={(e) => setMainText(e.target.value)}/>
             </div>
             <div>
-                <textarea placeholder={'Додатковий текст'} onChange={(e) => setAdditionalText(e.target.value)}/>
+                <textarea required placeholder={'Додатковий текст'} onChange={(e) => setAdditionalText(e.target.value)}/>
             </div>
             <div>
-                <textarea placeholder={'Номер телефону'} onChange={(e) => setPhoneNumber(e.target.value)}/>
+                <textarea required placeholder={'Номер телефону'} onChange={(e) => setPhoneNumber(e.target.value)}/>
             </div>
 
 
-            <BlackButton border_radius={'20px'} width={'180px'} text={'Попросити'} onClick={handleSubmit}/>
+            <BlackButton type={'submit'} border_radius={'20px'} width={'180px'} text={'Попросити'}/>
 
 
-        </div>
+        </form>
     );
 };
 

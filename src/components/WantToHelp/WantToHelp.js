@@ -44,7 +44,9 @@ const WantToHelp = () => {
     return (
         <div className={'want-to-help'}>
             <div className={'logo-moto'}>
-                <img src={Logo} alt="logo" style={{width: '80px'}}/>
+                <div>
+                    <img src={Logo} alt="logo" style={{width: '80px'}}/>
+                </div>
                 <h2>Тут Люди які хочуть саме твоєї допомоги</h2>
             </div>
             {/*</div>*/}

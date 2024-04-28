@@ -6,6 +6,7 @@
   row-gap: 10px;
   width: 330px;
   min-width: 330px;
+  max-width: 330px;
   //min-height: 200px;
   background-color: white;
   border: black 1px solid;
@@ -65,12 +66,17 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  width: 70%;
-  min-width: 70%;
+  width: 195px;
+  min-width: 195px;
   overflow-wrap: anywhere;
-  //max-width: 60%;
+  max-width: 195px;
   //min-width: 60%;
   row-gap: 10px;
+
+  & > * {
+    width: 100%;
+    max-width: 100%;
+  }
 }
 
 

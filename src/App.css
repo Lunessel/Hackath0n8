@@ -13,8 +13,21 @@
 }
 
 .App {
-  background: linear-gradient(to bottom right, #B5CADD, #B5CAE8);
+  /*background-image: url("gradient_bg.png");*/
+  /*background-repeat: repeat-x;*/
+  background: #86A2C3;
+  /*background-color: red;*/
   min-height: 100vh;
   display: flex;
   justify-content: center;
+
+  & > div {
+    width: 100%;
+    max-width: 586px;
+    display: flex;
+    justify-content: center;
+    /*background-color: red;*/
+    background: linear-gradient(to bottom right, #B5CADD, #B5CAE8);
+
+  }
 }
