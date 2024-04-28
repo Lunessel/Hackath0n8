@@ -4,7 +4,7 @@ import PopUpModalWindow from "../shared/PopUpModalWindow/PopUpModalWindow";
 import Pagination from 'rc-pagination';
 
 import HelpService from "../../services/HelpService";
-import Logo from './images/logo_test.svg';
+import Logo from './images/logo.svg';
 import Zbir from './images/zbir.svg';
 import Pidveztu from './images/pidveztu.svg';
 import Dopomoga from './images/dopomoga.svg';
@@ -44,7 +44,7 @@ const WantToHelp = () => {
     return (
         <div className={'want-to-help'}>
             <div className={'logo-moto'}>
-                <img src={Logo} alt="logo"/>
+                <img src={Logo} alt="logo" style={{width: '80px'}}/>
                 <h2>Тут Люди які хочуть саме твоєї допомоги</h2>
             </div>
             {/*</div>*/}
