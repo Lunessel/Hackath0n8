@@ -1,7 +1,8 @@
 import React from 'react';
-import './search_bar.scss';
+
 import focus from './images/Vector.svg';
 import clear from './images/Vector1.svg';
+import './search_bar.scss';
 
 const SearchBar = () => {
     const [search, setSearch] = React.useState('');

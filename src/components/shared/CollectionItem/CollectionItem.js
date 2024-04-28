@@ -1,8 +1,7 @@
 import React from 'react';
-import './collection_item.scss';
-import PopUpModalWindow from "../PopUpModalWindow/PopUpModalWindow"
 
 import Volunteer from './images/volunteer.svg';
+import './collection_item.scss';
 
 const CollectionItem = ({title, main_text, additional_text, contacts, photo, isVolunteer= true, setPhoneNumber, setActive}) => {
     const handleContacts = () => {

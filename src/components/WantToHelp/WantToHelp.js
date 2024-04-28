@@ -1,9 +1,10 @@
 import React, {useCallback, useEffect, useState} from 'react';
+import HelpService from "../../services/HelpService";
+
+import Pagination from 'rc-pagination';
 import CollectionItem from "../shared/CollectionItem/CollectionItem";
 import PopUpModalWindow from "../shared/PopUpModalWindow/PopUpModalWindow";
-import Pagination from 'rc-pagination';
 
-import HelpService from "../../services/HelpService";
 import Logo from './images/logo.svg';
 import Zbir from './images/zbir.svg';
 import Pidveztu from './images/pidveztu.svg';
@@ -37,7 +38,6 @@ const WantToHelp = () => {
     }, [ fetchData]);
 
     const changePageNumber = (e) => {
-        console.log(e)
         fetchData(limit*(e-1))
     }
 

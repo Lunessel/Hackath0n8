@@ -1,10 +1,11 @@
 import React, {useState} from 'react';
-import './login_item.scss';
+import {useNavigate} from "react-router-dom";
+
+import AuthService from "../../services/AuthService";
+
 import AuthTextField from "../shared/AuthTextField/AuthTextField";
 import BlackButton from "../shared/BlackButton/BlackButton";
-import {useNavigate} from "react-router-dom";
-import HomePage from "../pages/HomePage/HomePage";
-import AuthService from "../../services/AuthService";
+import './login_item.scss';
 
 const LoginItem = ({step, setStep}) => {
     const [phoneNumber, setPhoneNumber] = useState();
@@ -20,7 +21,6 @@ const LoginItem = ({step, setStep}) => {
 
             const response = await AuthService.login(phoneNumber, password)
             localStorage.setItem('token', response.data.token)
-            console.log(localStorage.getItem('token'))
             setError('')
             navigate('/home/want_to_help')
         }

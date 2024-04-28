@@ -1,8 +1,9 @@
 import React from 'react';
-import './success_page.scss'
-import Hands from './images/3d-render-hand-high-five-gesture-team-work-clap 1.svg'
+
 import BlackButton from "../../shared/BlackButton/BlackButton";
+import Hands from './images/3d-render-hand-high-five-gesture-team-work-clap 1.svg'
 import {useNavigate} from "react-router-dom";
+import './success_page.scss'
 
 const SuccessPage = () => {
     const navigate = useNavigate();

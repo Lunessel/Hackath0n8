@@ -1,8 +1,6 @@
-import React, { Dispatch, SetStateAction } from 'react';
+import React from 'react';
 
-// import './pop_up_modal_window.css'
 import './pop_up_modal_window.scss';
-import close_cross from "./images/close.svg";
 
 const PopUpModalWindow = ({active, setActive, children, header_text}) => {
     return (

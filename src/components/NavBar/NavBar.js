@@ -1,7 +1,8 @@
 import React from 'react';
 import {NavLink} from "react-router-dom";
-import './nav_bar.scss';
+
 import lock from './images/material-symbols_lock-outline.svg';
+import './nav_bar.scss';
 
 const NavBar = () => {
     const [step, setStep] = React.useState(1);

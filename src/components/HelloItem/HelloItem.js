@@ -1,8 +1,9 @@
 import React from 'react';
-import './hello_item.scss';
+
 import BlackButton from "../shared/BlackButton/BlackButton";
-import high_five from './images/3d-render-hand-high-five-gesture-team-work-clap 1.svg';
 import CircleStageItem from "../shared/CircleStageItem/CircleStageItem";
+import high_five from './images/3d-render-hand-high-five-gesture-team-work-clap 1.svg';
+import './hello_item.scss';
 const HelloItem = ({step, setStep }) => {
     return (
         <div className={'hello-item'}>

@@ -1,5 +1,6 @@
 import React from 'react';
-import {styled, TextField} from "@mui/material";
+import {TextField} from "@mui/material";
+
 import './auth_textfield.scss';
 
 const AuthTextField = ({text, width, ...props}) => {

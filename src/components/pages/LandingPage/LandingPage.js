@@ -1,8 +1,8 @@
 import React from 'react';
-import './landing_page.scss';
+
 import HelloItem from "../../HelloItem/HelloItem";
 import LoginRegisterItem from "../../LoginRegisterItem/LoginRegisterItem";
-import HomePage from "../HomePage/HomePage";
+import './landing_page.scss';
 
 const LandingPage = () => {
     const [step, setStep] = React.useState(1);

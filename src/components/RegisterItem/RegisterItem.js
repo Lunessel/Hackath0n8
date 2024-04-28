@@ -1,11 +1,11 @@
-import React from 'react';
-import './register_item.scss';
-import AuthTextField from "../../components/shared/AuthTextField/AuthTextField";
-import {useState} from "react";
-import BlackButton from "../shared/BlackButton/BlackButton";
+import React, {useState} from 'react';
 import {useNavigate} from "react-router-dom";
 
 import AuthService from "../../services/AuthService";
+
+import AuthTextField from "../../components/shared/AuthTextField/AuthTextField";
+import BlackButton from "../shared/BlackButton/BlackButton";
+import './register_item.scss';
 
 const RegisterItem = ({step, setStep}) => {
     const [name, setName] = useState();
@@ -21,7 +21,6 @@ const RegisterItem = ({step, setStep}) => {
         e.preventDefault()
         try {
             const response = await AuthService.registration(name, surName, phoneNumber, password)
-            console.log(response.data.token)
             localStorage.setItem('token', response.data.token)
             setError('')
 

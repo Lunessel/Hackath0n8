@@ -2,7 +2,6 @@ import $api from "../http";
 
 export default class HelpService {
     static async post_help_request(title, text, extra_text, phone_number, is_volunteer) {
-        console.log({title, text, extra_text, phone_number, is_volunteer})
         return $api.post('/help-requests', {title, text, extra_text, phone_number, is_volunteer})
     }
 

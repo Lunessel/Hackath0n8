@@ -19,8 +19,6 @@ $api.interceptors.request.use((config) => {
 $api.interceptors.response.use((config) => {
     return config;
 },async (error) => {
-    console.log(error)
-    const originalRequest = error.config;
     if (error.response.status === 401) {
         localStorage.removeItem('token')
         const navigate = useNavigate();

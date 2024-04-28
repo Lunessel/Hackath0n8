@@ -1,10 +1,9 @@
-import React from 'react';
-import './login_register_item.scss';
-import {useState} from "react";
-import BlackButton from "../shared/BlackButton/BlackButton";
+import React, {useState} from 'react';
+
 import LoginItem from "../LoginItem/LoginItem";
 import RegisterItem from "../RegisterItem/RegisterItem";
 import CircleStageItem from "../shared/CircleStageItem/CircleStageItem";
+import './login_register_item.scss';
 
 const LoginRegisterItem = ({step, setStep}) => {
     const [is_login_active, setIs_login_active] = useState(true);
@@ -13,7 +12,6 @@ const LoginRegisterItem = ({step, setStep}) => {
     }
     return (
         <div className={'login-register-item'}>
-            {/*<h2>{step}/3</h2>*/}
             <CircleStageItem step={step}/>
             <div className={'login-register-item__input'}>
                 {is_login_active && <h2>Увійди</h2>}

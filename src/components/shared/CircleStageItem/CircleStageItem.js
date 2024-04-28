@@ -1,4 +1,5 @@
 import React from 'react';
+
 import './circle_stage_item.scss';
 
 const CircleStageItem = ({step}) => {

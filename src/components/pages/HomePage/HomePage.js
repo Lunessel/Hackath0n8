@@ -1,10 +1,11 @@
 import React, {useEffect} from 'react';
 import {Route, Routes, useLocation, useNavigate} from 'react-router-dom';
+
 import NavBar from "../../NavBar/NavBar";
-import './home_page.scss';
 import WantToHelp from "../../WantToHelp/WantToHelp";
 import NeedHelp from "../../NeedHelp/NeedHelp";
 import SuccessPage from "../SuccessPage/SuccessPage";
+import './home_page.scss';
 
 const HomePage = () => {
     const location = useLocation();

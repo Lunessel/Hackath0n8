@@ -1,5 +1,5 @@
 import React, {useCallback, useEffect, useState} from 'react';
-import {redirect, useNavigate} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import {Checkbox} from "@mui/material";
 
 import HelpService from "../../services/HelpService";
@@ -35,7 +35,6 @@ const NeedHelp = () => {
 
     const fetchData = useCallback(async () => {
         const response = await HelpService.get_my_help_requests();
-        console.log(response.data.items)
         setMyRequests(response.data.items)
     }, [])
 
@@ -53,7 +52,6 @@ const NeedHelp = () => {
             phoneNumber,
             isVolunteer
             )
-        console.log(result)
         if(result.status === 200){
             navigate('/home/success')
         }

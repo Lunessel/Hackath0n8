@@ -1,4 +1,5 @@
 import React from 'react';
+
 import './black_button.scss';
 
 const BlackButton = ({border_radius, text, width, ...props} ) => {
