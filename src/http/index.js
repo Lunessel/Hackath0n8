@@ -1,7 +1,7 @@
 import axios from "axios";
 import {useNavigate} from "react-router-dom";
 
-export const API_URL = `http://34.118.102.90:8443/api/v1/`
+export const API_URL = `https://34.118.102.90:8443/api/v1/`
 
 const $api = axios.create({
     baseURL: API_URL,
