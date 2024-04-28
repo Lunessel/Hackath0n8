@@ -22,7 +22,7 @@ const LoginItem = ({step, setStep}) => {
             localStorage.setItem('token', response.data.token)
             console.log(localStorage.getItem('token'))
             setError('')
-            // navigate('/home/want_to_help')
+            navigate('/home/want_to_help')
         }
         catch (e){
             setError('Такого користувача не знайдено')
