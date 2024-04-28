@@ -11,7 +11,6 @@ const AuthTextField = ({text, width, ...props}) => {
             label={text}
             required
             variant="outlined"
-            // id="validation-outlined-input"
             InputLabelProps={{className: "auth-textfield__label"}}
             InputProps={{className: "auth-textfield__input", sx: { borderRadius: '10px' }}}
             sx={{width: width, borderColor: 'rgb(189, 193, 195)'}}

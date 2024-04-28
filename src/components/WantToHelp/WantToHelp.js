@@ -49,10 +49,6 @@ const WantToHelp = () => {
                 </div>
                 <h2>Тут Люди які хочуть саме твоєї допомоги</h2>
             </div>
-            {/*</div>*/}
-            {/*/!*<div className={'want-to-help__filter'}>*!/*/}
-            {/*/!*    <button>Фільтр <img src={Lock} alt={"lock"}/></button>*!/*/}
-            {/*</div>*/}
             <div className={'collection'}>
                 {helpRequests.map((item, index) => (
                     <CollectionItem
