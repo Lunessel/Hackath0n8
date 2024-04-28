@@ -62,7 +62,7 @@ const NeedHelp = () => {
         <form className={'need-help'} onSubmit={handleSubmit}>
             {myRequests !== [] && <div className={'your-requests'}>
                 <h3>Твої запити</h3>
-                <div>
+                <div style={{padding: '0 30px'}}>
                     {myRequests.map((item, index) => (
                         <CollectionItem
                             key={index}
