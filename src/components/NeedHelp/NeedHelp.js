@@ -20,8 +20,8 @@ const NeedHelp = () => {
     }
 
     const [title, setTitle] = useState('collection');
-    const [mainText, setMainText] = useState();
-    const [additionalText, setAdditionalText] = useState();
+    const [mainText, setMainText] = useState("Основний текст");
+    const [additionalText, setAdditionalText] = useState("Додатковий текст");
     const [phoneNumber, setPhoneNumber] = useState();
     const [isVolunteer, setIsVolunteer] = useState(true);
     const [contactsActive, setContactsActive] = React.useState(false);
