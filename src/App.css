@@ -13,10 +13,12 @@
 }
 
 .App {
-  /*background-image: url("gradient_bg.png");*/
-  /*background-repeat: repeat-x;*/
-  background: #86A2C3;
+  background-image: url("virus.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /*background: #86A2C3;*/
   /*background-color: red;*/
+  width: 100%;
   min-height: 100vh;
   display: flex;
   justify-content: center;
